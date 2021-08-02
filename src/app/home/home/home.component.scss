@@ -1,8 +1,21 @@
 .example-card {
     max-width: 400px;
+    width: 100%;
   }
   
   .example-header-image {
     
     background-size: cover;
   }
+
+  .fixed-element {
+    background-color: #c0c0c0;
+    position:fixed;
+    top:0;
+    width:100%;
+    z-index:100;
+}
+
+.revert-fixed-element{
+    position:unset !important;
+}

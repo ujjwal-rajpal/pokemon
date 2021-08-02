@@ -28,5 +28,9 @@ export class ApiService {
       .pipe(catchError(this.formatErrors));
   }
 
+  getPokemon(path:string, name:string):Observable<any> {
+    return this.http.get(`${environment.api_url}${path}/${name}`)
+      .pipe(catchError(this.formatErrors));
+  }
 }
 

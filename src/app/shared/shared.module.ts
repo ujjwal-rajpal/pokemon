@@ -2,11 +2,12 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { MyMaterialModule } from './material.module';
+import { DefaultImagePipe } from './default-image.pipe';
 
 
 
 @NgModule({
-  declarations: [],
+  declarations: [DefaultImagePipe],
   imports: [
     CommonModule,
     FlexLayoutModule,
@@ -14,7 +15,8 @@ import { MyMaterialModule } from './material.module';
   ],
   exports: [
     FlexLayoutModule,
-    MyMaterialModule
+    MyMaterialModule,
+    DefaultImagePipe
   ]
 })
 export class SharedModule { }
