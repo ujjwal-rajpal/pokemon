@@ -2,7 +2,7 @@
     {{limit}}/{{totalPokemon}}
 </mat-card>
 
-<mat-grid-list cols="{{(isHandset$ | async) ? '1' : ((this.isTabletset$ | async) ? 3 : '4')}}" rowHeight="1:{{(isHandset$ | async) ? 1.2 : 1.2}}">
+<mat-grid-list cols="{{(isHandset$ | async) ? '1' : ((this.isTabletset$ | async) ? 3 : '4')}}" rowHeight="1:{{(isHandset$ | async) ? 1.2 : 1.2}}" id="container">
 
     <div *ngFor="let pokemon of pokemonList; let i=index">
     <mat-grid-tile>
@@ -20,4 +20,8 @@
           </mat-card>
     </mat-grid-tile>
     </div>
+    
   </mat-grid-list>
+  <div fxLayout="row" fxLayoutAlign="center center" *ngIf="!loadPokemon" >
+    <mat-spinner></mat-spinner>
+</div>
